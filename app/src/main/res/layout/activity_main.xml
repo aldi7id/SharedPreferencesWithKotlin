@@ -4,15 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
+    <TextView
+            android:id="@+id/tv_tittle_enter_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masukkan Id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:hint="Masukkan ID Anda"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tittle_enter_id"
+        app:layout_constraintStart_toEndOf="@id/tv_tittle_enter_id"
+        app:layout_constraintTop_toTopOf="@id/tv_tittle_enter_id" />
+    <TextView
+        android:id="@+id/tv_tittle_enter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Masukkan Nama"
+        app:layout_constraintTop_toBottomOf="@id/tv_tittle_enter_id"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan Nama"
+        app:layout_constraintEnd_toEndOf="@+id/et_id"
+        app:layout_constraintStart_toStartOf="@+id/et_id"
+        app:layout_constraintTop_toBottomOf="@id/et_id" />
+
+    <TextView
+        android:id="@+id/tv_your_id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idmu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tittle_enter_name"
+        android:paddingTop="70dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Namamu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_your_id_title"/>
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tv_your_id_title"
+        app:layout_constraintTop_toTopOf="@id/tv_your_id_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_your_id_title"
+        android:text="112"
+        android:paddingTop="70dp"
+        android:paddingStart="100dp"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_id"
+        app:layout_constraintStart_toStartOf="@+id/tv_id"
+        app:layout_constraintTop_toBottomOf="@id/tv_id"
+        android:layout_marginStart="100dp"
+        android:text="Sabrina"
+        />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/btn_view"/>
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View"
+        app:layout_constraintStart_toEndOf="@id/btn_save"
+        app:layout_constraintBottom_toBottomOf="@id/btn_save"
+        app:layout_constraintTop_toTopOf="@id/btn_save"
+        app:layout_constraintEnd_toStartOf="@id/btn_clear"
+        />
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintStart_toEndOf="@id/btn_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_view"
+        app:layout_constraintBottom_toBottomOf="@id/btn_view"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
